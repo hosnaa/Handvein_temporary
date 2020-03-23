@@ -12,17 +12,17 @@
 * The Dataset directory has several sub-directories:
 * [Enhanced_Augmented_roi dataset:](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Dataset/Enhanced_Augmented_roi%20dataset) that has the enhanced images for age and for gender classification.
 * [Original_Dataset:](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Dataset/Original_Dataset) the original dataset as raw images without preprocessing/division/excluding_prediction_subjects.
-* [Prediction_subjects:](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Dataset/Prediction%20subjects) images of 4 subjects that were cut out from the original dataset.
+* [Prediction_subjects:](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Dataset/Prediction%20subjects) images of 4 subjects that were cut from each category for prediction.
 * [Raw data (prediction excluded):](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Dataset/Raw%20data%20(prediction%20excluded)) Raw images divided into gender-age with excluding the prediction images.
-* #### Note: The number of the dataset and the reserved items for prediction can be identified using the "Age_Gender.xlsx" file.
+* #### Note: The number of the dataset and the reserved items for prediction can be identified using the [Age_Gender.xlsx](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Age_Gender.xlsx) & [ages-Gender-Data_modified.txt](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/ages-Gender-Data_modified.txt) files.
 
 ### Preprocessing
 * Firstly, The left-hand images were flipped using the [Flipping_Left](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/flipping_left.py) file.
-* Secondly, enhancement through several filters using the [Enhance_2020](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/Enhance_2020.py) file.
-* Thirdly, several augmentation techniques are applied to increase the dataset using the [Augmentation_2020](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/Augmentation_2020.py) file.
-* Fourthly -and lastly-, extracting the region of interest of the images using the [ROI_2020](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/ROI_2020.py
+* Secondly, for the enhancement track we input the flipped images to the enhancement/filters code(median, bilateral, CLAHE) that can be found in the [Enhance_2020](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/Enhance_2020.py) file.
+* Thirdly, we augment (Rotate, Translate, and Scale) the enhanced images using the augmentation code that can be found in the [Augmentation_2020](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/Augmentation_2020.py) file.
+* Lastly, we take the region of interest "ROI" to the augmented enhanced images using the [ROI_2020](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/ROI_2020.py
 ) file.
-* In case of working with lbp images, then you'll have to use the [lbp](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/lbp.py) file.
+* In case of working with lbp images, then you'll have to use the [lbp](https://github.com/AmrMahmoud2/HandVeinClassification/blob/master/Preprocessing/lbp.py) file, after the second step.
 
 ### Deeplearning
 * Two subdirectories can be found: [Age](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Neural_Network_Code/Age) and [Gender](https://github.com/AmrMahmoud2/HandVeinClassification/tree/master/Neural_Network_Code/Gender)

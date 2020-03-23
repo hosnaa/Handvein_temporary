@@ -3,7 +3,7 @@
  from the images of the subjects' dorsal hand veins.
 ## Pipeline
 * The project can be summarized into 3 main steps:
-    * Dataset: Hand vein images of 200 subjects (.. male & .. female// .. old & .. young)
+    * Dataset: Hand vein images of 200 subjects (104 male & 96 female// 61 old & 149 young)
     * Preprocessing: Some processing (filters, extracting ROI) and augmentation techniques
     *  are applied on the images to enhance their quality.
     * Deeplearning: A fine-tuned model that is used to classify the images that is based on VGG-16.

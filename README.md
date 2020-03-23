@@ -32,5 +32,4 @@
 * Then, you'll need to save the model at the desired epoch 
 * (depending on the accuracy and loss graphs obtained from training)
 * And lastly, you can use this ".h5" saved model for prediction. 
-   During the prediction, a    ".csv"   file is made that comprises the image name, the prediction to it and its true label
-   a confusion matrix can be found at the end of this    ".csv"   file to better assess the prediction.
+   During the prediction, a    ".csv"   file is made that comprises the image name, the prediction to it and its true label, a confusion matrix can be found at the end of this    ".csv"   file to better assess the prediction.
